@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Inner Circle · Dashboard directions</title>
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap">
+<style>
+:root{--bg:#000000;--fg:#ffffff;--soft:#bdbdbd;--muted:#8a8a8a;--line:#262626;--card:#0a0a0a}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Inter","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.page{box-sizing:border-box;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;max-width:1800px;margin:0 auto;padding:clamp(16px,3.5vh,32px) clamp(20px,3.4vw,48px)}
+main{flex:1 1 auto;display:flex;flex-direction:column;min-height:0}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-size:15px;line-height:20px;font-weight:600;letter-spacing:.01em}
+.brand img{width:34px;height:auto;display:block}
+.tag{font-size:13px;line-height:20px;color:var(--muted)}
+.intro{margin-top:clamp(16px,6vh,64px);max-width:1000px}
+.eyebrow{margin:0;font-size:12px;line-height:16px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+h1{margin:clamp(8px,1.6vh,14px) 0 0;font-size:clamp(28px,min(5.6vh,4vw),52px);line-height:1.06;font-weight:600;letter-spacing:-.035em}
+.lede{margin:clamp(8px,2vh,18px) 0 0;max-width:640px;font-size:clamp(15px,2.3vh,18px);line-height:1.55;color:var(--soft)}
+.phone{display:none}
+.shelf{flex:1 1 0;min-height:280px;margin-top:clamp(16px,4.5vh,52px)}
+.grid{list-style:none;margin:0;padding:0;display:grid;gap:28px;grid-template-columns:repeat(3,min(calc((var(--shelf-w,100%) - 56px) / 3),calc((var(--shelf-h,10000px) - 116px) * 1.6)))}
+.card{display:block;color:inherit;text-decoration:none;border:1px solid var(--line);border-radius:16px;background:var(--card);overflow:hidden;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-4px);border-color:#ffffff;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.card:focus-visible{outline:2px solid #ffffff;outline-offset:4px}
+.thumb{position:relative;display:block;aspect-ratio:16/10;background:#000000;border-bottom:1px solid #1a1a1a}
+.thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none}
+.open{position:absolute;right:12px;top:12px;padding:7px 12px;border-radius:999px;background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.18);font-size:13px;line-height:18px;font-weight:500;opacity:0;transform:translateY(-4px);transition:opacity .2s ease,transform .2s ease;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.card:hover .open,.card:focus-visible .open{opacity:1;transform:none}
+.meta{display:grid;grid-template-columns:auto 1fr;column-gap:14px;row-gap:6px;padding:18px 20px 22px}
+.num{font-size:13px;line-height:24px;font-weight:600;letter-spacing:.08em;color:var(--muted);font-variant-numeric:tabular-nums}
+.name{font-size:20px;line-height:24px;font-weight:600;letter-spacing:-.01em}
+.desc{grid-column:2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;line-height:21px;color:var(--soft)}
+.foot{margin:clamp(12px,3vh,36px) 0 0;font-size:13px;line-height:20px;color:var(--muted)}
+.viewer{position:fixed;inset:0;z-index:10;background:#000000;opacity:0;transition:opacity .2s ease}
+.viewer.on{opacity:1}
+.viewer:focus{outline:none}
+.viewer iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000000}
+.bar{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);display:flex;align-items:center;gap:4px;padding:6px;border-radius:999px;background:rgba(14,14,14,.86);border:1px solid rgba(255,255,255,.16);box-shadow:0 12px 32px rgba(0,0,0,.55);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);white-space:nowrap;transition:opacity .25s ease,transform .25s ease}
+.bar.idle{opacity:0;transform:translate(-50%,10px);pointer-events:none}
+.bar button{min-height:40px;padding:0 14px;border:0;border-radius:999px;background:transparent;color:#ffffff;font:500 14px/20px "Inter","Helvetica Neue",Arial,sans-serif;cursor:pointer}
+.bar button:hover{background:rgba(255,255,255,.12)}
+.bar button:focus-visible{outline:2px solid #ffffff;outline-offset:2px}
+.bar .arrow{width:40px;padding:0;font-size:18px}
+.sep{width:1px;height:22px;margin:0 4px;background:rgba(255,255,255,.16)}
+.label{padding:0 8px;font-size:14px;line-height:20px;color:#d9d9d9;font-variant-numeric:tabular-nums}
+.keys{padding:0 10px 0 4px;font-size:12px;line-height:16px;color:var(--muted)}
+@media (hover:none){.keys{display:none}}
+@media (max-width:900px){.shelf{flex:none;min-height:0}.grid{grid-template-columns:minmax(0,620px)}}
+@media (max-width:700px){.phone{display:block;margin:14px 0 0;font-size:14px;line-height:21px}.grid{gap:20px}.bar{bottom:12px}.label{max-width:44vw;overflow:hidden;text-overflow:ellipsis}}
+@media (prefers-reduced-motion:reduce){.card,.open,.viewer,.bar{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="top">
+<span class="brand"><img src="assets/logo.png" alt="">Inner Circle</span>
+<span class="tag">Draft for review</span>
+</header>
+<main>
+<section class="intro">
+<p class="eyebrow">Dashboard directions</p>
+<h1>Pick the look for your dashboard.</h1>
+<p class="lede">Three takes on the same screen, with the same content. Click one to open it full size, then use the arrows to compare.</p>
+<p class="phone">These are laptop designs. On a phone, turn it sideways for the full view.</p>
+</section>
+<div class="shelf">
+<ul class="grid">
+<li><a class="card" href="options/1.html" data-opt="1"><span class="thumb"><iframe src="options/1.html" title="Option 1 preview" tabindex="-1" aria-hidden="true"></iframe><span class="open" aria-hidden="true">Open full view ↗</span></span><span class="meta"><span class="num">01</span><span class="name">Maximal</span><span class="desc">Bold and graphic: big type, hard edges, and your progress up front.</span></span></a></li>
+<li><a class="card" href="options/2.html" data-opt="2"><span class="thumb"><iframe src="options/2.html" title="Option 2 preview" tabindex="-1" aria-hidden="true"></iframe><span class="open" aria-hidden="true">Open full view ↗</span></span><span class="meta"><span class="num">02</span><span class="name">Minimal</span><span class="desc">Calm and focused: just the essentials, with room to breathe.</span></span></a></li>
+<li><a class="card" href="options/3.html" data-opt="3"><span class="thumb"><iframe src="options/3.html" title="Option 3 preview" tabindex="-1" aria-hidden="true"></iframe><span class="open" aria-hidden="true">Open full view ↗</span></span><span class="meta"><span class="num">03</span><span class="name">Your mockup, polished</span><span class="desc">Your team's mockup, refined: a real mountain and a clearer path.</span></span></a></li>
+</ul>
+</div>
+<p class="foot">Sample data throughout. Designed for laptop and desktop screens.</p>
+</main>
+</div>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Full view" tabindex="-1" hidden>
+<iframe id="frame" title="Dashboard design, full view"></iframe>
+<div class="bar idle" id="bar">
+<button type="button" id="back">← All designs</button>
+<span class="sep" aria-hidden="true"></span>
+<button type="button" class="arrow" id="prev" aria-label="Previous design">‹</button>
+<span class="label" id="label" aria-live="polite"></span>
+<button type="button" class="arrow" id="next" aria-label="Next design">›</button>
+<span class="keys" aria-hidden="true">Esc · ← →</span>
+</div>
+</div>
+
+<script>
+(function(){
+var names={1:'Maximal',2:'Minimal',3:'Your mockup, polished'};
+var viewer=document.getElementById('viewer'),frame=document.getElementById('frame'),bar=document.getElementById('bar'),label=document.getElementById('label'),back=document.getElementById('back');
+var current=0,openedHere=false,lastFocus=null,timer=0;
+
+// Cards take the room left under the intro: as wide as a third of the row, or as tall as the space allows.
+var shelf=document.querySelector('.shelf');
+function sizeShelf(){shelf.style.setProperty('--shelf-w',shelf.clientWidth+'px');shelf.style.setProperty('--shelf-h',shelf.clientHeight+'px');}
+if(window.ResizeObserver)new ResizeObserver(sizeShelf).observe(shelf);else addEventListener('resize',sizeShelf);
+sizeShelf();
+
+function wake(){
+  bar.classList.remove('idle');
+  clearTimeout(timer);
+  timer=setTimeout(function(){if(!bar.matches(':hover')&&!bar.contains(document.activeElement))bar.classList.add('idle');},2600);
+}
+function show(n){
+  current=n;
+  frame.src='options/'+n+'.html';
+  label.textContent=n+' / 3 · '+names[n];
+  document.title='Inner Circle · '+names[n];
+  if(viewer.hidden){
+    lastFocus=document.activeElement;
+    viewer.hidden=false;
+    document.documentElement.style.overflow='hidden';
+    requestAnimationFrame(function(){viewer.classList.add('on');});
+    viewer.focus({preventScroll:true});
+  }
+  wake();
+}
+function hide(){
+  if(viewer.hidden)return;
+  viewer.classList.remove('on');
+  viewer.hidden=true;
+  frame.src='about:blank';
+  current=0;
+  document.documentElement.style.overflow='';
+  document.title='Inner Circle · Dashboard directions';
+  if(lastFocus&&lastFocus.focus)lastFocus.focus({preventScroll:true});
+}
+function fromHash(){var n=parseInt(location.hash.slice(1),10);return n>=1&&n<=3?n:0;}
+function open(n){openedHere=true;history.pushState({o:n},'','#'+n);show(n);}
+function step(d){var n=(current+d+2)%3+1;history.replaceState({o:n},'','#'+n);show(n);}
+function close(){
+  if(openedHere){openedHere=false;history.back();}
+  else{history.replaceState(null,'',location.pathname+location.search);hide();}
+}
+function onKey(k){
+  if(!current)return;
+  if(k==='Escape')close();
+  else if(k==='ArrowLeft')step(-1);
+  else if(k==='ArrowRight')step(1);
+}
+
+document.querySelectorAll('.card').forEach(function(a){
+  a.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+    e.preventDefault();
+    open(+a.getAttribute('data-opt'));
+  });
+});
+back.addEventListener('click',close);
+document.getElementById('prev').addEventListener('click',function(){step(-1);});
+document.getElementById('next').addEventListener('click',function(){step(1);});
+addEventListener('popstate',function(){var n=fromHash();if(n){show(n);}else{openedHere=false;hide();}});
+addEventListener('keydown',function(e){
+  if(current&&(e.key==='Escape'||e.key==='ArrowLeft'||e.key==='ArrowRight')){e.preventDefault();onKey(e.key);if(current)wake();}
+});
+addEventListener('message',function(e){
+  if(e.source!==frame.contentWindow||!e.data||typeof e.data!=='object')return;
+  if(e.data.ic==='activity')wake();
+  else if(e.data.ic==='key'){onKey(e.data.key);if(current)wake();}
+});
+viewer.addEventListener('mousemove',wake);
+viewer.addEventListener('touchstart',wake,{passive:true});
+bar.addEventListener('focusin',wake);
+
+var start=fromHash();
+if(start)show(start);
+})();
+</script>
+</body>
+</html>

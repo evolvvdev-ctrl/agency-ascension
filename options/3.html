@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Inner Circle · Option 3 · Your mockup, polished</title>
+<link rel="icon" href="../assets/icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@200..700&display=swap">
+<style>
+body{margin:0;background:#050505}
+a{color:#ffffff}a:hover{color:#d9d9d9}
+.s{font-family:"Sora","Helvetica Neue",Arial,sans-serif}
+.nav{display:flex;align-items:center;gap:14px;min-height:46px;padding:0 14px;border-radius:12px;color:#c4c4c4;text-decoration:none;font:400 15px/20px "Sora",sans-serif}
+.nav:hover{background:#111111;color:#ffffff}
+.nav[aria-current="page"]{background:#161616;color:#ffffff;box-shadow:inset 0 0 0 1px #262626}
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.nav:focus-visible,.iconbtn:focus-visible{outline:2px solid #ffffff;outline-offset:3px}
+.tile:focus-visible{outline:2px solid #ffffff;outline-offset:4px}
+.search:focus-within{outline:2px solid #ffffff;outline-offset:2px}
+.search input{flex:1 1 auto;min-width:0;background:transparent;border:0;outline:0;color:#ffffff;font:400 14px/20px "Sora",sans-serif}
+.search input::placeholder{color:#8a8a8a}
+.iconbtn{width:44px;height:44px;border-radius:999px;border:0;background:transparent;color:#ffffff;display:inline-flex;align-items:center;justify-content:center;position:relative;cursor:pointer}
+.tile{position:absolute;box-sizing:border-box;border-radius:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(150deg,#262626 0%,#0c0c0c 72%);text-decoration:none}
+a.tile:hover,a.tile:focus-visible{z-index:5;color:#ffffff}
+.dim:hover{border-color:#7a7a7a}
+.lit{border:1px solid rgba(255,255,255,.85);color:#ffffff;box-shadow:0 6px 0 #0b0b0b,0 0 22px rgba(255,255,255,.32),0 0 2px #ffffff,inset 0 1px 0 rgba(255,255,255,.35)}
+.cur{border:2px solid #ffffff;color:#ffffff;box-shadow:0 6px 0 #0b0b0b,0 0 36px rgba(255,255,255,.55),0 0 4px #ffffff,inset 0 1px 0 rgba(255,255,255,.45)}
+.dim{border:1px solid #3a3a3a;color:#9a9a9a;box-shadow:0 6px 0 #0b0b0b,0 10px 22px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.12)}
+.top{border:1px solid #ffffff;box-shadow:0 7px 0 #0b0b0b,0 0 44px rgba(255,255,255,.5),0 0 4px #ffffff,inset 0 1px 0 rgba(255,255,255,.45)}
+.lab{position:absolute;display:flex;flex-direction:column;gap:3px;max-width:250px;text-shadow:0 1px 2px rgba(0,0,0,.9),0 0 12px rgba(0,0,0,.75)}
+.nm{margin:0;font:600 12px/16px "Sora",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#ffffff}
+.ds{margin:0;font:400 13px/17px "Sora",sans-serif;color:#bdbdbd}
+.num{position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%);font:600 12px/16px "Sora",sans-serif;letter-spacing:.1em;color:#bdbdbd;text-shadow:0 1px 2px rgba(0,0,0,.9),0 0 12px rgba(0,0,0,.75);transition:opacity .15s}
+.num.done{color:#ffffff}
+.tip{position:absolute;left:calc(100% + 12px);top:50%;transform:translate(-4px,-50%);display:flex;flex-direction:column;gap:3px;width:max-content;max-width:220px;padding:10px 12px;border-radius:10px;background:rgba(8,8,8,.92);border:1px solid #2e2e2e;box-shadow:0 10px 24px rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:opacity .15s,transform .15s}
+a.tile:hover .tip,a.tile:focus-visible .tip{opacity:1;transform:translate(0,-50%)}
+a.tile:hover .num,a.tile:focus-visible .num{opacity:0}
+.st{font:600 11px/14px "Sora",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8a8a8a}
+@media (prefers-reduced-motion:reduce){.tip,.num{transition:none}}
+</style>
+<style>
+html,body{height:100%;overflow:hidden}
+.frame{position:absolute;left:50%;top:50%;width:1440px;height:calc(var(--h,900) * 1px);transform:translate(-50%,-50%) scale(var(--k,1));container-type:size}
+.frame>div{width:100% !important;height:100% !important}
+img[src$="mountain.jpg"],svg[viewBox="0 0 1220 900"],ol[aria-label="Agency Ascension stages"]{inset:auto 0 0 auto !important;width:1220px !important;height:900px !important;transform-origin:100% 100%;transform:scale(var(--s,1))}
+html[data-scaled] img[src$="mountain.jpg"]{-webkit-mask-image:linear-gradient(90deg,transparent,#000 200px);mask-image:linear-gradient(90deg,transparent,#000 200px)}
+.lab{transform-origin:0 50%;transform:scale(var(--inv,1))}
+.num{transform-origin:0 50%;transform:translateY(-50%) scale(var(--inv,1))}
+.tip{transform-origin:0 50%;transform:translate(-4px,-50%) scale(var(--inv,1))}
+a.tile:hover .tip,a.tile:focus-visible .tip{transform:translate(0,-50%) scale(var(--inv,1))}
+@container (max-height: 760px){
+nav[aria-label="Main"]{gap:20px !important}
+.nav{min-height:40px}
+}
+@container (max-height: 680px){
+.nav{min-height:36px}
+}
+</style>
+</head>
+<body>
+<div class="frame">
+<div class="s" style="width: 1440px; height: 900px; overflow: hidden; display: flex; background: #050505; color: #ffffff;">
+
+<nav aria-label="Main" style="flex: 0 0 220px; box-sizing: border-box; background: #070707; border-right: 1px solid #171717; padding: 28px 16px; display: flex; flex-direction: column; gap: 32px;">
+<a href="#" aria-label="Inner Circle dashboard" style="padding: 4px 16px; display: block;"><img src="../assets/logo.png" alt="" style="width: 62px; height: auto; display: block;"></a>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<a class="nav" href="#" aria-current="page"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>Dashboard</a>
+<a class="nav" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Coach</a>
+<a class="nav" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>Check-in</a>
+<a class="nav" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Ad accounts</a>
+<a class="nav" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>Competitor ads</a>
+<a class="nav" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>Call reviews</a>
+<a class="nav" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>Roleplay</a>
+<a class="nav" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><circle cx="11.5" cy="14.5" r="2.5"/><path d="m13.3 16.3 1.7 1.7"/></svg>Client research</a>
+</div>
+<div style="margin-top: auto; border: 1px solid #262626; border-radius: 14px; background: #0a0a0a; padding: 18px; display: flex; flex-direction: column; gap: 10px;">
+<p style="margin: 0; font-size: 12px; line-height: 16px; letter-spacing: .2em; text-transform: uppercase; color: #a3a3a3;">Your progress</p>
+<p style="margin: 0; font-weight: 300; font-size: 40px; line-height: 44px;">18%</p>
+<div role="img" aria-label="18 percent complete" style="height: 6px; border-radius: 999px; background: #262626;"><div style="width: 18%; height: 6px; border-radius: 999px; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,.6);"></div></div>
+<p style="margin: 0; font-size: 13px; line-height: 18px; color: #a3a3a3;">3 / 16 Steps Complete</p>
+</div>
+</nav>
+
+<div style="position: relative; flex: 1 1 auto; min-width: 0; overflow: hidden; background: #050505;">
+<img src="../assets/mountain.jpg" alt="" style="position: absolute; left: 0; top: 0; width: 1220px; height: 900px; display: block;">
+<svg aria-hidden="true" width="1220" height="900" viewBox="0 0 1220 900" style="position: absolute; left: 0; top: 0;">
+<defs>
+<filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<path d="M120,770 C170,750 200,720 248,704 S330,655 372,640" fill="none" stroke="#000000" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/>
+<path d="M372,640 C414,625 450,595 492,578 S570,535 606,518 S680,475 712,460 S780,420 806,404 S852,366 874,350 S920,314 930,298 S920,222 903,190" fill="none" stroke="#000000" stroke-opacity=".5" stroke-width="5" stroke-linecap="round"/>
+<path d="M120,770 C170,750 200,720 248,704 S330,655 372,640" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" filter="url(#glow)"/>
+<path d="M372,640 C414,625 450,595 492,578 S570,535 606,518 S680,475 712,460 S780,420 806,404 S852,366 874,350 S920,314 930,298 S920,222 903,190" fill="none" stroke="#ffffff" stroke-opacity=".6" stroke-width="1.8" stroke-linecap="round" filter="url(#glow)"/>
+</svg>
+
+<header style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 40px 0 250px;">
+<label class="search" style="width: 520px; display: flex; align-items: center; gap: 10px; background: rgba(10,10,10,.85); border: 1px solid #2e2e2e; border-radius: 999px; padding: 0 20px; min-height: 48px; box-sizing: border-box; color: #a3a3a3;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input type="search" aria-label="Search or ask anything" placeholder="Search or ask anything..."></label>
+<div style="display: flex; align-items: center; gap: 14px;">
+<button class="iconbtn" type="button" aria-label="Notifications, 1 new"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><span aria-hidden="true" style="position: absolute; top: 10px; right: 11px; width: 7px; height: 7px; border-radius: 999px; background: #ffffff; box-shadow: 0 0 6px #ffffff;"></span></button>
+<span aria-hidden="true" style="width: 1px; height: 32px; background: #262626;"></span>
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 999px; background: #1f1f1f; border: 1px solid #333333; box-sizing: border-box; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600;">JR</span>
+<span style="font-size: 15px; line-height: 20px;">Jordan Reyes</span>
+<button class="iconbtn" type="button" aria-label="Account menu" style="width: 28px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px;"><path d="m6 9 6 6 6-6"/></svg></button>
+</div>
+</header>
+
+<section aria-labelledby="hero" style="position: absolute; z-index: 2; left: 64px; top: 116px; width: 680px; display: flex; flex-direction: column; gap: 14px;">
+<p style="margin: 0; font-size: 13px; line-height: 18px; letter-spacing: .42em; text-transform: uppercase; color: #a3a3a3;">Agency Ascension</p>
+<h1 id="hero" style="margin: 0; text-transform: uppercase; line-height: 1.02;"><span style="display: block; font-weight: 200; font-size: 54px; letter-spacing: .01em;">Your path to a</span><span style="display: block; font-size: 64px; letter-spacing: .005em;"><span style="font-weight: 600;">6 Figure</span> <span style="font-weight: 300; color: #8f8f8f;">Agency</span></span></h1>
+<p style="margin: 6px 0 0; max-width: 480px; font-size: 16px; line-height: 26px; color: #c4c4c4;">Follow the roadmap. Complete the steps. Build real momentum. This is the exact system to go from zero to $100,000+.</p>
+</section>
+
+<ol aria-label="Agency Ascension stages" style="list-style: none; margin: 0; padding: 0; position: absolute; inset: 0; z-index: 1;">
+<li>
+<a class="tile lit" href="#" style="left: 84px; top: 734px; width: 72px; height: 72px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 28px; height: 28px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg><span class="num done" aria-hidden="true">01</span><span class="tip"><span class="st">Completed</span><span class="nm">01 · Foundation</span><span class="ds">Mindset, model &amp; core setup.</span></span></a>
+</li>
+<li>
+<a class="tile lit" href="#" style="left: 216px; top: 672px; width: 64px; height: 64px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 26px; height: 26px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span class="num done" aria-hidden="true">02</span><span class="tip"><span class="st">Completed</span><span class="nm">02 · Niche &amp; offer</span><span class="ds">Pick a winning niche and offer.</span></span></a>
+</li>
+<li aria-current="step">
+<a class="tile cur" href="#" aria-label="Continue stage 03, Brand &amp; positioning" style="left: 341px; top: 609px; width: 62px; height: 62px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px;"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg></a>
+<span class="lab" style="left: 417px; top: 616px;"><span class="nm">03 · Brand &amp; positioning</span><span class="ds" style="color: #d0d0d0;">Build a high-converting brand.</span></span>
+</li>
+<li>
+<a class="tile dim" href="#" style="left: 463px; top: 549px; width: 58px; height: 58px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 22px; height: 22px;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span class="num" aria-hidden="true">04</span><span class="tip"><span class="st">Up next</span><span class="nm">04 · Systems &amp; tools</span><span class="ds">Set up your stack and automations.</span></span></a>
+</li>
+<li>
+<a class="tile dim" href="#" style="left: 579px; top: 491px; width: 54px; height: 54px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 22px; height: 22px;"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg><span class="num" aria-hidden="true">05</span><span class="tip"><span class="nm">05 · Lead generation</span><span class="ds">Start getting consistent leads.</span></span></a>
+</li>
+<li>
+<a class="tile dim" href="#" style="left: 687px; top: 435px; width: 50px; height: 50px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px;"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg><span class="num" aria-hidden="true">06</span><span class="tip"><span class="nm">06 · Sales &amp; appointments</span><span class="ds">Turn leads into booked calls.</span></span></a>
+</li>
+<li>
+<a class="tile dim" href="#" style="left: 782px; top: 380px; width: 48px; height: 48px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px;"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg><span class="num" aria-hidden="true">07</span><span class="tip"><span class="nm">07 · Client onboarding</span><span class="ds">Set clients up for success.</span></span></a>
+</li>
+<li>
+<a class="tile dim" href="#" style="left: 851px; top: 327px; width: 46px; height: 46px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px;"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg><span class="num" aria-hidden="true">08</span><span class="tip"><span class="nm">08 · Fulfillment &amp; results</span><span class="ds">Run campaigns, get ROI, keep clients.</span></span></a>
+</li>
+<li>
+<a class="tile dim" href="#" style="left: 908px; top: 276px; width: 44px; height: 44px;"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px;"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg><span class="num" aria-hidden="true">09</span><span class="tip"><span class="nm">09 · Scaling</span><span class="ds">Add clients and team, pass $100K.</span></span></a>
+</li>
+<li>
+<span class="tile top" style="left: 863px; top: 142px; width: 80px; height: 80px;"><img src="../assets/logo.png" alt="" style="width: 44px; height: auto; display: block;"></span>
+<span class="lab" style="left: 961px; top: 147px; flex-direction: row; align-items: center; gap: 14px; max-width: 240px;"><span style="font-weight: 200; font-size: 34px; line-height: 40px;">10</span><span style="display: flex; flex-direction: column; gap: 4px;"><span class="nm">6 Figures<br>and beyond</span><span class="ds">Build freedom on<br>your terms.</span></span></span>
+</li>
+</ol>
+
+<p style="position: absolute; z-index: 2; right: 32px; bottom: 20px; margin: 0; font-size: 12px; line-height: 16px; color: #8a8a8a;">Sample data</p>
+</div>
+</div>
+</div>
+<script>
+(function(){
+var root=document.documentElement;
+function fit(){
+var W=innerWidth,H=innerHeight,k=W/1440,h=H/k;
+if(h<640){h=640;k=H/640;}
+if(h>1000){h=1000;k=Math.min(W/1440,H/1000);}
+if(k>1.5){k=1.5;h=Math.min(Math.max(H/k,640),1000);}
+var s=h>900?h/900:Math.min(1,(h-88)/758);
+root.style.setProperty('--k',k);root.style.setProperty('--h',h);
+root.style.setProperty('--s',s);root.style.setProperty('--inv',1/s);
+root.toggleAttribute('data-scaled',s<0.999);
+}
+addEventListener('resize',fit);fit();
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#"]');if(a)e.preventDefault();});
+if(window.parent!==window){
+var last=0;
+function ping(){var t=Date.now();if(t-last>150){last=t;parent.postMessage({ic:'activity'},'*');}}
+addEventListener('mousemove',ping);addEventListener('touchstart',ping,{passive:true});
+addEventListener('keydown',function(e){var t=(document.activeElement||{}).tagName;if((e.key==='Escape'||e.key==='ArrowLeft'||e.key==='ArrowRight')&&t!=='INPUT'&&t!=='TEXTAREA'){parent.postMessage({ic:'key',key:e.key},'*');}});
+}
+})();
+</script>
+</body>
+</html>
